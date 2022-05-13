@@ -15,20 +15,13 @@ const FormDiv = styled.div`
 
 function CreateAppointment() {
   const history = useHistory();
-  const [doctors, setDoctors] = useState([]);
-  const [patients, setPatients] = useState([]);
-  const [doctor, setDoctor] = useState("");
-  const [patient, setPatient] = useState("");
+  
 
   const [newAppointment, setNewAppointment] = useState([]);
   const [appointment_date, setAppointmentDate] = useState("");
   const [appointment_duration, setAppointmentDuration] = useState(0);
   const [appointment_type, setAppointmentType] = useState("");
   const [appointment_reason, setAppointmentReason] = useState("");
-
-  const [appointment_doctor, setAppointmentDoctor] = useState("");
-  const [appointment_patient, setAppointmentPatient] = useState("");
-
   const [doctor_lastname, setDoctorLastName] = useState("");
   const [patient_lastname, setPatientLastName] = useState("");
 
@@ -46,9 +39,8 @@ function CreateAppointment() {
         appointment_duration: appointment_duration,
         appointment_reason: appointment_reason,
 
-        // appointment_doctor: appointment_doctor,
+        
         appointment_doctor: doctor_lastname,
-        // appointment_patient: appointment_patient,
         appointment_patient: patient_lastname,
       }),
     })
@@ -61,37 +53,7 @@ function CreateAppointment() {
 
     history.push("/")
 
-    // Need to find a way to check if the doctor and patient already exists in database
-    /******************************************************************/
-    // fetch(BASE_URL + "/doctors", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     doctor_lastname: doctor_lastname,
-    //   }),
-    // })
-    //   .then((r) => r.json())
-    //   .then(setDoctor);
-
-    // console.log("Created a doctor");
-
-    // fetch(BASE_URL + "/patients", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     patient_lastname: patient_lastname,
-    //   }),
-    // })
-    //   .then((r) => r.json())
-    //   .then(setPatient);
-
-    // console.log("Created a patient");
-
-    /******************************************************************/
+  
   }
 
   function handleDoctorLastNameChange(e) {

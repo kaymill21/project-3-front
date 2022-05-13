@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import AppointmentList from "../components/AppointmentList";
 import { useHistory } from "react-router-dom";
 

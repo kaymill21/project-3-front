@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 
@@ -61,9 +61,7 @@ function UpdatePatient() {
     setPatientFirstName(e.target.value);
   }
 
-  function handlePatientLastNameChange(e) {
-    setPatientLastName(e.target.value);
-  }
+ 
 
   function handlePatientPhoneChange(e) {
     setPatientPhone(e.target.value);
@@ -101,17 +99,7 @@ function UpdatePatient() {
               />
             </div>
 
-            {/* <div>
-            <label htmlFor="appdoc">Last Name</label>
-            <input
-              id="appdoc"
-              type="text"
-              onChange={handlePatientLastNameChange}
-              value={patient_lastname}
-              placeholder="Last Name"
-              required
-            />
-          </div> */}
+           
           </div>
 
           <div className="grid-container halves">

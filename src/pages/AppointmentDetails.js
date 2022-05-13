@@ -32,13 +32,11 @@ function AppointmentDetails({ onUpdateAppointment }) {
   let appointmentPatient = {};
   const { id } = useParams();
   const [appointment, setAppointment] = useState([]);
-  const [doctor, setDoctor] = useState("");
   const [doctors, setDoctors] = useState([]);
-  const [patient, setPatient] = useState("");
   const [patients, setPatients] = useState([]);
   const [toBeUpdatedDoctor, setToBeUpdatedDoctor] = useState("");
   const [toBeUpdatedPatient, setToBeUpdatedPatient] = useState("");
-  const [updatedDoctor, setUpdatedDoctor] = useState("");
+  
 
   useEffect(() => {
     fetch(BASE_URL + "/doctors")
@@ -197,14 +195,10 @@ function AppointmentDetails({ onUpdateAppointment }) {
                 ? appointmentPatient.patient_lastname
                 : appointment.appointment_patient}
 
-              {/* Temporary fix */}
-              {/* {appointment.appointment_patient === null &&
-              appointmentPatient.patient_lastname !== null
-                ? ""
-                : appointment.appointment_patient} */}
+             
             </td>
           </tr>
-          {/*******************************************************/}
+          
 
           <tr>
             <td className="left-column">Patient's First Name</td>
