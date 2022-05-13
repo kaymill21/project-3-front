@@ -1,4 +1,3 @@
-// import NavBar from "./NavBar";
 import { Route, Switch } from "react-router-dom";
 import Home from "../pages/Home";
 import Doctors from "../pages/Doctors";

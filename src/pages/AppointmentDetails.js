@@ -52,18 +52,17 @@ function AppointmentDetails({ onUpdateAppointment }) {
 
     fetch(BASE_URL + `/appointments/${id}`)
       .then((r) => r.json())
-      // .then((appointment) => setAppointment(appointment));
       .then((appointment) => {
-        // console.log(appointment);
+       
         setAppointment(appointment);
       });
   }, []);
 
   patients.forEach((eachPatient) => {
-    // console.log(eachPatient)
+ 
     for (const key in eachPatient) {
       if (appointment.appointment_patient === eachPatient[key]) {
-        // console.log(eachPatient);
+     ;
         appointmentPatient = eachPatient;
       }
     }
@@ -153,7 +152,7 @@ function AppointmentDetails({ onUpdateAppointment }) {
             </td>
           </tr>
 
-          {/*******************************************************/}
+          
           <tr>
             <td className="left-column">Doctor's Last Name</td>
             <td>
@@ -162,7 +161,7 @@ function AppointmentDetails({ onUpdateAppointment }) {
                 : appointment.appointment_doctor}
             </td>
           </tr>
-          {/*******************************************************/}
+         
 
           <tr>
             <td className="left-column">Doctor's First Name</td>
@@ -189,7 +188,7 @@ function AppointmentDetails({ onUpdateAppointment }) {
                 : appointmentDoctor.doctor_phone}
             </td>
           </tr>
-          {/*******************************************************/}
+          
 
           <tr>
             <td className="left-column">Patient's Last Name</td>
